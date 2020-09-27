@@ -1,0 +1,12 @@
+<div class="content" role="main" style="max-height: 300px">
+  <span class="center">
+  <button (click)="onClick()">Call empty method in the parent component</button>
+    </span>
+  <div style="display: flex; flex-direction: row">
+    <app-change-detection-strategy class="children-component"></app-change-detection-strategy>
+    <app-change-detection-strategy-push class="children-component"></app-change-detection-strategy-push>
+  </div>
+</div>
+<div>
+  <div [innerHTML]="fragment1"></div>
+</div>

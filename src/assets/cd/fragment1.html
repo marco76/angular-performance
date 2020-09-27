@@ -1,0 +1,36 @@
+Angular source code: <a href="https://github.com/angular/angular/blob/9206a26e1d3fdfb68b416945fb23ac26e070b9d9/packages/core/src/change_detection/constants.ts" target="_blank">
+  GitHub
+</a>
+
+Documentation: <a href="https://angular.io/api/core/Component#changeDetection">Doc Icon</a>
+
+<div>
+  <p>
+    By design Angular activate for each Component and his children the automatic change detection.
+    This feature increase the number of events generated and checked by Angular.
+    To reduce the number of events generated the automatic change detection should be deactivated:
+    <code><pre>
+    @Component({
+      <strong>changeDetection: ChangeDetectionStrategy.OnPush</strong>
+    })
+    </pre></code>
+  </p>
+  <p>
+    The <a href="https://github.com/angular/angular/blob/9206a26e1d3fdfb68b416945fb23ac26e070b9d9/packages/core/src/change_detection/change_detector_ref.ts#L69" target="_blank">markforChange</a> is called:
+    <ul>
+      <li>After an event in the DOM: click, submit, ...</li>
+      <li>After the data is fetched via Http: click, submit, ...</li>
+      <li>Activated by timers: setTimeout, setInterval</li>
+    </ul>
+</div>
+<div>
+  <h3>Dev vs. Prod mode</h3>
+  <p>If started in Dev mode the Angular application does more checks than in the Prod mode. Be sure to deploy the Prod version to your users and don't use only the Dev app to evaluate the performance.</p>
+</div>
+
+<div>
+  <h3>Example</h3>
+  <p>In this example we can see that without OnPush the left component is recalculated more times than the component on the right that uses the OnPush strategy.</p>
+  <p>If you try to click the button in the parent component (a simple call to an empty method) you can see that the left component is recalculated but not the right one.</p>
+  <p>If you click on the button on the right component: the left component, that is at the same level, is refreshed. </p>
+</div>

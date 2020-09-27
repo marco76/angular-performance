@@ -10,13 +10,17 @@ import { SafeHtmlPipe } from './pipe/safe-html.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {ChangeDetectionStrategyService} from './posts/change-detection-strategy/change-detection-strategy.service';
 import { ChangeDetectionStrategyPushComponent } from './posts/change-detection-strategy-push/change-detection-strategy-push.component';
+// tslint:disable-next-line:max-line-length
 import { ChangeDetectionStrategyParentComponent } from './posts/change-detection-strategy-parent/change-detection-strategy-parent.component';
 import {RouterModule} from '@angular/router';
 import { MainComponent } from './posts/main/main.component';
+import { ObservablesComponent } from './posts/observables/observables.component';
+import {ObservableServiceService} from './posts/observables/observable-service.service';
 
 const routes = [
   { path: '', component: MainComponent },
   { path: 'change-detection', component: ChangeDetectionStrategyParentComponent },
+  { path: 'observables', component: ObservablesComponent },
   ];
 
 @NgModule({
@@ -29,14 +33,15 @@ const routes = [
     SafeHtmlPipe,
     ChangeDetectionStrategyPushComponent,
     ChangeDetectionStrategyParentComponent,
-    MainComponent
+    MainComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ChangeDetectionStrategyService],
+  providers: [ChangeDetectionStrategyService, ObservableServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

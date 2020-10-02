@@ -1,19 +1,24 @@
 <!-- Toolbar -->
+<!--
 <div class="toolbar" role="banner">
-  <span>
-    NgPerf
-  </span>
-  <span style="padding-left: 10px">Improve your App performance</span>
+  <span style="padding-left: 10px">NgPerf - Improve your Angular application performances</span>
     <div class="spacer"></div>
     <app-twitter-logo></app-twitter-logo>
 </div>
+-->
+<div>
+  <div class="toolbar" role="banner">
+    <span style="padding-left: 10px">NgPerf - Improve your Angular application performances</span>
+    <div class="spacer"></div>
+    <app-twitter-logo></app-twitter-logo>
+  </div>
+  <div class="w3-bar w3-black" style="margin-top: 30px">
+    <button class="w3-bar-item w3-button"><a routerLink="">Common issues</a></button>
+    <button class="w3-bar-item w3-button"><a routerLink="change-detection">Change Detection</a></button>
+    <button class="w3-bar-item w3-button"><a routerLink="observables">Observables</a></button>
+  </div>
+</div>
 
 <div class="content" role="main">
-  <nav>
-    <ul>
-      <li><a routerLink="">Home</a> </li>
-      <li><a routerLink="observables">Observables</a> </li>
-    </ul>
-  </nav>
   <router-outlet></router-outlet>
 </div>

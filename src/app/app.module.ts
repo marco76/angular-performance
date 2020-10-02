@@ -16,6 +16,7 @@ import {RouterModule} from '@angular/router';
 import { MainComponent } from './posts/main/main.component';
 import { ObservablesComponent } from './posts/observables/observables.component';
 import {ObservableServiceService} from './posts/observables/observable-service.service';
+import { CardComponent } from './components/card/card.component';
 
 const routes = [
   { path: '', component: MainComponent },
@@ -34,7 +35,8 @@ const routes = [
     ChangeDetectionStrategyPushComponent,
     ChangeDetectionStrategyParentComponent,
     MainComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

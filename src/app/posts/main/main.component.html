@@ -1,2 +1,14 @@
 <div [innerHTML]="fragment1"></div>
-<a routerLink="change-detection" routerLinkActive="active">Change Detection</a>
+
+<app-card
+  title="ChangeDetection"
+  description="How Change detection works? Why do we need OnPush?"
+  linkName="change-detection"
+  ></app-card>
+<app-card
+  title="Observables"
+  description="Stop looking at me! Did you close the subscription?"
+  linkName="observables"></app-card>
+<app-card title="Observables" description="You don't need to be all the time in the ngZone!"></app-card>
+<app-card title="for(let i = 0; i < ..." description="Still using for? Maybe you are not wrong."></app-card>
+

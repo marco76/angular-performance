@@ -2,11 +2,12 @@
   <span class="center">
   <button (click)="onClick()">Call empty method in the parent component</button>
     </span>
-  <div style="display: flex; flex-direction: row">
+  <div>
     <app-change-detection-strategy class="children-component"></app-change-detection-strategy>
     <app-change-detection-strategy-push class="children-component"></app-change-detection-strategy-push>
   </div>
-</div>
+
 <div>
-  <div [innerHTML]="fragment1"></div>
+  <div [innerHTML]="fragment1" style="width: 90vw"></div>
+</div>
 </div>

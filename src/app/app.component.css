@@ -283,3 +283,7 @@ svg#clouds {
     visibility: hidden;
   }
 }
+
+.dev-link:hover {
+  opacity: 0.7
+}

@@ -9,7 +9,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+document.addEventListener('DOMContentLoaded', () => {
+  platformBrowserDynamic().bootstrapModule(AppModule)
   .then(moduleRef => {
     if (isDevMode()) {
       const applicationRef = moduleRef.injector.get(ApplicationRef);
@@ -17,3 +18,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
       enableDebugTools(appComponent);
     }
   }, err => console.error(err));
+});

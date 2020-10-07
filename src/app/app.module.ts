@@ -20,6 +20,7 @@ import { CardComponent } from './components/card/card.component';
 import { AngularVersionComponent } from './posts/angular-version/angular-version.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { ProdModeComponent } from './posts/prod-mode/prod-mode.component';
+import { TerminalComponent } from './components/terminal/terminal.component';
 
 const routes = [
   { path: '', component: MainComponent },
@@ -44,12 +45,15 @@ const routes = [
     CardComponent,
     AngularVersionComponent,
     BadgeComponent,
-    ProdModeComponent
+    ProdModeComponent,
+    TerminalComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})
   ],
   providers: [ChangeDetectionStrategyService, ObservableServiceService],
   bootstrap: [AppComponent]

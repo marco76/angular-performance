@@ -15,5 +15,9 @@
     <loc>https://www.ngperf.com/observables</loc>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://www.ngperf.com/update</loc>
+    <changefreq>weekly</changefreq>
+  </url>
 
 </urlset>

@@ -1,6 +1,6 @@
 <div class="card" (click)="openLink()">
   <div class="container">
-    <h4><b>{{title}}</b></h4>
+    <h4><b>{{title}} <app-badge *ngIf="badge" text="Coming Soon!"></app-badge></b></h4>
     <p>{{description}}</p>
   </div>
 </div>

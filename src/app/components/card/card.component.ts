@@ -11,6 +11,7 @@ export class CardComponent implements OnInit {
   @Input() title;
   @Input() description;
   @Input() linkName?: string;
+  @Input() badge?: string;
 
   constructor(private router: Router) {
   }

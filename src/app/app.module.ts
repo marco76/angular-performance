@@ -18,12 +18,15 @@ import { ObservablesComponent } from './posts/observables/observables.component'
 import {ObservableServiceService} from './posts/observables/observable-service.service';
 import { CardComponent } from './components/card/card.component';
 import { AngularVersionComponent } from './posts/angular-version/angular-version.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import { ProdModeComponent } from './posts/prod-mode/prod-mode.component';
 
 const routes = [
   { path: '', component: MainComponent },
   { path: 'change-detection', component: ChangeDetectionStrategyParentComponent },
   { path: 'observables', component: ObservablesComponent },
   { path: 'update', component: AngularVersionComponent },
+  { path: 'prod-mode', component: ProdModeComponent },
   ];
 
 @NgModule({
@@ -39,7 +42,9 @@ const routes = [
     MainComponent,
     ObservablesComponent,
     CardComponent,
-    AngularVersionComponent
+    AngularVersionComponent,
+    BadgeComponent,
+    ProdModeComponent
   ],
   imports: [
     BrowserModule,
